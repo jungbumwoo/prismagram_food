@@ -7,23 +7,24 @@ export default {
             isAutenticated(request);
             const { postId } = args;
             const { user } = request;
-            try {
-                const existingLike = await prisma.$exists.like({
-                    AND: [
-                        {
-                            user: {
-                                id: user.id
-                            }
-                        },
-                        {
-                            post: {
-                                id: postId
-                            }
+            const filterOptions = {
+                AND: [
+                    {
+                        user: {
+                            id: user.id
                         }
-                    ]
-                });
+                    },
+                    {
+                        post:{
+                            id: postId
+                        }
+                    }
+                ]
+            };
+            try {
+                const existingLike = await prisma.$exists.like(filterOptions);
                 if (existingLike) {
-                    // TO DO
+                    // TO DO. delete Connection.
                 } else {
                     await prisma.createLike({
                         user: {
