@@ -1,9 +1,0 @@
-Query {
-    editUser(
-        username: String
-        email: String
-        firstName: String
-        lastName: String
-        bio: String
-    ): User!
-}

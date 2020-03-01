@@ -1,5 +1,6 @@
+
 type User {
-  id: ID! @id @unique
+  id: ID! @unique
   username: String! @unique
   email: String! @unique
   firstName: String @default(value: "")
@@ -15,7 +16,7 @@ type User {
 }
 
 type Post {
-  id: ID! @id @unique
+  id: ID! @unique
   location: String
   caption: String!
   user: User!
@@ -25,32 +26,32 @@ type Post {
 }
 
 type Like {
-  id: ID! @id @unique
+  id: ID! @unique
   user: User!
   post: Post!
 }
 
 type Comment {
-  id: ID! @id @unique
+  id: ID! @unique
   text: String!
   user: User!
   post: Post!
 }
 
 type File {
-  id: ID! @id @unique
+  id: ID! @unique
   url: String!
   post: Post!
 }
 
 type Room {
-  id: ID! @id @unique
+  id: ID! @unique
   participants: [User!]!
   messages: [Message!]!
 }
 
 type Message {
-  id: ID! @id @unique
+  id: ID! @unique
   text: String!
   from: User! @relation(name: "From")
   to: User! @relation(name: "To")
