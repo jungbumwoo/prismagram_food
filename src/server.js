@@ -6,11 +6,10 @@ import { GraphQLServer } from "graphql-yoga";
 import logger from "morgan";
 import schema from "./schema";
 import { sendSecretMail } from "./utils";
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
 const server = new GraphQLServer({ schema });
 
-sendSecretMail("woojungbum12@gmail.com", "whatthefuck");
 server.express.use(logger("dev"));
 
 server.start({ port: PORT }, () =>
