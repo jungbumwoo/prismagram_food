@@ -14,8 +14,6 @@ export const generateSecret = () => {
 };
 
 const sendMail = email => {
-  console.log(process.env.SENDGRID_USERNAME);
-  console.log(process.env.SENDGRID_PASSWORD);
   const options = {
     auth: {
       api_user: process.env.SENDGRID_USERNAME,
