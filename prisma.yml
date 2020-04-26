@@ -1,4 +1,4 @@
-endpoint: https://us1.prisma.sh/jungbum-woo-a9e155/prismagram_food/dev
+endpoint: https://us1.prisma.sh /jungbum-woo-a9e155/prismagram_food/dev
 datamodel: datamodel.prisma
 
 generate:
