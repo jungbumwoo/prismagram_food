@@ -21,13 +21,14 @@
     "babel-node": "0.0.1-security",
     "copy": "^0.3.2",
     "dotenv": "^8.2.0",
-    "graphql-tools": "^4.0.6",
+    "graphql-tools": "^4.0.8",
     "graphql-yoga": "^1.18.3",
     "jsonwebtoken": "^8.5.1",
-    "merge-graphql-schemas": "^1.7.3",
-    "morgan": "^1.9.1",
-    "nodemailer": "^6.4.2",
+    "merge-graphql-schemas": "^1.7.8",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.4.8",
     "nodemailer-sendgrid-transport": "^0.2.0",
+    "npx": "^10.2.2",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "path": "^0.12.7",
@@ -36,7 +37,7 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.10.3",
     "babel-core": "^7.0.0-bridge.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.4"
   },
   "scripts": {
     "deploy": "prisma deploy",
